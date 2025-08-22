@@ -34,7 +34,7 @@ import {
   ChevronRight,
   Quote
 } from 'lucide-react';
-import Logo from "../Assets/Images/logo.png";
+import Logo from "../assets/Images/logo.png";
 
 const Homepage = () => {
   const [isDark, setIsDark] = useState(false);
@@ -206,7 +206,7 @@ const Homepage = () => {
   ];
 
   const projects = [
-    { title: 'AI Platform', desc: 'Next-gen customer experience with machine learning', icon: Brain, color: 'from-blue-500 to-cyan-500', status: 'Live' },
+    { title: 'AI Platform By Subhash', desc: 'Next-gen customer experience with machine learning', icon: Brain, color: 'from-blue-500 to-cyan-500', status: 'Live' },
     { title: 'FinTech Suite', desc: 'Secure blockchain-based financial transactions', icon: Shield, color: 'from-green-500 to-emerald-500', status: 'Beta' },
     { title: 'Cloud Infrastructure', desc: 'Scalable microservices architecture', icon: Globe, color: 'from-purple-500 to-indigo-500', status: 'Live' },
     { title: 'E-commerce Engine', desc: 'Smart recommendations and analytics', icon: TrendingUp, color: 'from-orange-500 to-red-500', status: 'Live' },
