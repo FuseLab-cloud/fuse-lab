@@ -208,7 +208,7 @@ const Homepage = () => {
   const projects = [
     { title: 'AI Platform By Subhash', desc: 'Next-gen customer experience with machine learning', icon: Brain, color: 'from-blue-500 to-cyan-500', status: 'Live' },
     { title: 'FinTech Suite', desc: 'Secure blockchain-based financial transactions', icon: Shield, color: 'from-green-500 to-emerald-500', status: 'Beta' },
-    { title: 'Cloud Infrastructure', desc: 'Scalable microservices architecture', icon: Globe, color: 'from-purple-500 to-indigo-500', status: 'Live' },
+    { title: 'Cloud Infrastructure By AYAN and KUNAL', desc: 'Scalable microservices architecture', icon: Globe, color: 'from-purple-500 to-indigo-500', status: 'Live' },
     { title: 'E-commerce Engine', desc: 'Smart recommendations and analytics', icon: TrendingUp, color: 'from-orange-500 to-red-500', status: 'Live' },
     { title: 'EdTech Platform', desc: 'Interactive learning with AI assessments', icon: Award, color: 'from-yellow-500 to-orange-500', status: 'Development' },
     { title: 'IoT Dashboard', desc: 'Real-time industrial monitoring system', icon: Zap, color: 'from-pink-500 to-rose-500', status: 'Live' },
