@@ -35,6 +35,7 @@ import {
   Quote
 } from 'lucide-react';
 import Logo from "../assets/Images/logo.png";
+import ContactSection from './ContactSection';
 
 const Homepage = () => {
   const [isDark, setIsDark] = useState(false);
@@ -886,92 +887,7 @@ const Homepage = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-32 bg-gray-50 dark:bg-gray-800/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20" data-animate id="contact-header">
-              <div className={`${visibleElements.has('contact-header') ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                <h2 className="text-4xl md:text-6xl font-black mb-6">
-                  Let's{' '}
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Connect</span>
-                </h2>
-                <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8 rounded-full"></div>
-                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  Ready to transform your business? Let's discuss how we can help you achieve your goals.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-16">
-              <div className="space-y-8" data-animate id="contact-info">
-                <div className={`space-y-8 ${visibleElements.has('contact-info') ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                  {[
-                    { icon: Mail, title: 'Email', info: 'hello@fuselab.com', gradient: 'from-blue-600 to-cyan-600' },
-                    { icon: Phone, title: 'Phone', info: '+1 (555) 123-4567', gradient: 'from-purple-600 to-indigo-600' },
-                    {
-                      icon: MapPin,
-                      title: 'Address',
-                      info: '123 Innovation Street, Tech Valley, CA 94000',
-                      gradient: 'from-green-600 to-emerald-600',
-                    },
-                  ].map((contact, index) => (
-                    <div key={index} className="flex items-center space-x-6 group">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${contact.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                        <contact.icon className="text-white" size={24} />
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                          {contact.title}
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-300 text-lg">{contact.info}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-6" data-animate id="contact-form">
-                <div className={`space-y-6 ${visibleElements.has('contact-form') ? 'animate-fade-in-scale' : 'opacity-0'}`}>
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div className="relative">
-                      <input
-                        type="text"
-                        placeholder="Your Name"
-                        className="w-full px-6 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:border-blue-400 dark:hover:border-blue-500"
-                      />
-                    </div>
-                    <div className="relative">
-                      <input
-                        type="email"
-                        placeholder="Your Email"
-                        className="w-full px-6 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:border-blue-400 dark:hover:border-blue-500"
-                      />
-                    </div>
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="w-full px-6 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:border-blue-400 dark:hover:border-blue-500"
-                  />
-                  <textarea
-                    placeholder="Your Message"
-                    rows={6}
-                    className="w-full px-6 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent hover:border-blue-400 dark:hover:border-blue-500 resize-none"
-                  ></textarea>
-                  <button
-                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-bold text-lg transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 group relative overflow-hidden"
-                    onClick={() => alert("Message sent! We'll get back to you soon.")}
-                  >
-                    <span className="relative z-10 flex items-center justify-center">
-                      Send Message
-                      <ArrowRight className="ml-3 transition-transform duration-300 group-hover:translate-x-2" size={20} />
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <ContactSection isDark={isDark} visibleElements={visibleElements} observerRef={observerRef} />
 
         {/* Footer */}
         <footer className="py-12 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
